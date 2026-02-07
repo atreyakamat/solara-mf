@@ -1,0 +1,279 @@
+You are a senior frontend architect + fintech product designer building an institutional-grade mutual fund research and simulation platform called FundFlow AI.
+
+Your task is to design and implement the complete frontend experience based on the following principles and requirements.
+
+1. Product Vision & Design Philosophy
+
+Build a high-performance, data-dense, yet clean UI that combines:
+
+Minimalism & clarity of Zerodha Coin
+
+Analytical depth of Groww / Morningstar
+
+Modern fintech polish (glass, soft shadows, subtle motion)
+
+This is NOT a basic investing app.
+It is a research + simulation + AI advisory platform for serious investors.
+
+Speed, clarity, and trust are critical.
+
+2. Core Modules to Build
+Module A: Fund Explorer (Discovery Engine)
+A1. Discovery Landing Page
+
+Design a category-first discovery experience:
+
+Grid cards for:
+
+Equity (Large, Mid, Small, Flexi)
+
+Debt
+
+Hybrid
+
+ELSS
+
+Index Funds
+
+Gold / Commodities
+
+Each card must show:
+
+Icon + category name
+
+Subtle hover animation
+
+Click → filtered fund list
+
+Include:
+
+Trending Funds carousel
+
+Top Rated Funds carousel
+
+Add a Global Search & Smart Filter Bar:
+
+Search by Fund Name / AMC
+
+Filters:
+
+Risk Level (Low / Medium / High)
+
+Star Rating (3–5)
+
+Minimum SIP amount
+
+AMC multi-select checkboxes
+
+UX goal: user should find a relevant fund in < 15 seconds.
+
+Module A2: Single Fund Detail Page (Fact Sheet)
+
+This is the most critical and data-intensive page.
+
+Header Section
+
+Fund Name
+
+AMC logo
+
+Current NAV + daily % change (green/red)
+
+Risk label (e.g., “Very High Risk”)
+
+Star rating
+
+Sticky Action Card (Right / Bottom on Mobile)
+
+Toggle: SIP | Lumpsum
+
+Investment amount input
+
+Dynamic “Minimum Investment” label
+
+Primary CTA:
+
+“Add to Simulator”
+
+Secondary: “Invest Now”
+
+Performance Charts
+
+Interactive NAV line chart
+
+Time ranges: 1M / 6M / 1Y / 3Y / 5Y / All
+
+Benchmark toggle (e.g., Nifty 50 comparison)
+
+Performance Metrics Grid
+
+CAGR & Absolute returns (1Y / 3Y / 5Y)
+
+Rolling Returns visualization
+
+Embedded XIRR calculator widget
+
+Pro Analytics Section
+
+Display:
+
+Alpha
+
+Beta
+
+Sharpe Ratio
+
+Sortino Ratio
+
+Standard Deviation
+
+Each metric must have:
+
+Tooltip with plain-English explanation
+
+Fund Details Block
+
+Expense Ratio (TER)
+
+Exit Load
+
+Taxation rules (dynamic based on fund type)
+
+AUM
+
+Fund Manager name
+
+Module B: Portfolio Simulator
+
+This is a sandbox environment — no real money.
+
+Builder Interface
+
+“Add Fund” search
+
+Allocation controls:
+
+Sliders OR numeric inputs
+
+Investment Mode:
+
+SIP / Lumpsum toggle
+
+Time Horizon slider:
+
+1Y / 3Y / 5Y / 10Y
+
+Simulation Results Dashboard
+
+Area chart:
+
+Invested amount vs Projected value
+
+Aggregate metrics:
+
+Portfolio CAGR
+
+Projected XIRR
+
+Estimated Profit/Loss
+
+Diversification Analysis
+
+Donut charts for:
+
+Asset Class split
+
+Market Cap split
+
+Sector exposure
+
+Detect & flag concentration risk visually (warnings if >50%).
+
+Module C: AI Advisor (Context-Aware)
+Floating Chat Widget
+
+Persistent across all pages
+
+Opens with contextual awareness
+
+Example:
+If user is on a fund page →
+“Want an analysis or a peer comparison?”
+
+Dedicated AI Advisor Page
+
+Full-screen conversational UI
+
+Chat history + streaming responses
+
+Suggested Prompts
+
+“Review my simulated portfolio”
+
+“Why is this fund’s Alpha negative?”
+
+“Suggest a better alternative”
+
+AI must always be context-aware (current fund / portfolio state).
+
+3. Technical Constraints (Must Follow)
+
+Framework: Next.js 14 (App Router)
+
+Styling: Tailwind CSS
+
+UI Components: shadcn/ui
+
+Charts: Recharts or Chart.js
+
+State Management: Zustand
+
+Performance Target:
+
+Fund pages < 1.5s load time
+
+API contracts to assume:
+
+GET /api/funds/list
+
+GET /api/funds/{id}
+
+POST /api/portfolio/simulate
+
+POST /api/chat
+
+4. UX Flow to Optimize For
+
+Discover fund
+
+Deeply analyze
+
+Add to simulator
+
+See risks visually
+
+Ask AI for validation
+
+Refine portfolio
+
+Gain confidence
+
+Every screen must reduce cognitive load while increasing insight.
+
+5. Output Expectations
+
+When responding, you must:
+
+Design page-by-page layouts
+
+Suggest component structures
+
+Explain UX decisions
+
+Highlight edge cases
+
+Think like a fintech PM + frontend lead
+
+Do NOT oversimplify.
+Do NOT skip data-heavy sections.
+This is a serious financial product.
