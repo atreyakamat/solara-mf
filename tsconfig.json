@@ -39,6 +39,9 @@
   ],
   "exclude": [
     "node_modules",
-    "nextjs-temp"
+    "nextjs-temp",
+    "client",
+    "server",
+    "script"
   ]
 }
