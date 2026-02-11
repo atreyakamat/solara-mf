@@ -33,15 +33,12 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "shared/**/*.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "nextjs-temp",
-    "client",
-    "server",
-    "script"
+    "node_modules"
   ]
 }

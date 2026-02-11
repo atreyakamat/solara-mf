@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-});
+function getOpenAI() {
+    return new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+}
 
 const systemPrompt = `You are FundFlow AI's investment advisor, an expert on Indian mutual funds. You help users:
 - Understand mutual fund concepts (NAV, expense ratio, CAGR, alpha, beta, sharpe ratio, etc.)
@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
 
         messages.push({ role: 'user', content });
 
-        const response = await openai.chat.completions.create({
+        const response = await getOpenAI().chat.completions.create({
             model: 'gpt-4o-mini',
             messages,
             stream: true,
